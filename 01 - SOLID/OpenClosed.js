@@ -76,4 +76,4 @@ const specs = new AndSpecification(
   new SizeSpecification(Sizes.small)
 );
 const resultFilter = BetterFilter.filter(products, specs);
-console.log(resultFilter);
+// console.log(resultFilter);
