@@ -47,7 +47,7 @@ class HtmlBuilder {
     this.root.children.push(child);
   }
 
-  addChildFluent(nameChild, textChild) {
+  addChildFluent(nameChild, textChild) { // chaining methods ...
     let child = new Tag(nameChild, textChild);
     this.root.children.push(child);
     return this;
