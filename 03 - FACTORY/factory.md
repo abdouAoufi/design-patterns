@@ -1,2 +1,6 @@
 factory method is a method for creating objects ..
 and being explicit of naming ...
+it's better to separate the factory in a class specialized to building object
+take care about object creation 
+we can use anounymous funciton for creating objects .....
+abstreact for related object

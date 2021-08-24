@@ -23,15 +23,30 @@ class PointNEW {
     this.x = x;
     this.y = y;
   }
-  static newCartizienPoint(x, y) {
+  static get factory() {
+    return new PointFactory();
+  }
+}
+// new way to define object
+// let pointNew = PointNEW.newCartizienPoint(3, 4);
+// console.log(pointNew);
+
+// ! implement separated concer principe
+
+class PointFactory {
+  newCartizienPoint(x, y) {
     return new PointNEW(x, y);
   }
-  static newPolarPoint(rho, theta) {
+  newPolarPoint(rho, theta) {
     let newX = rho * Math.cos(theta);
     let newY = rho * Math.sin(theta);
     return new PointNEW(newX, newY);
   }
 }
-// new way to define object
-let pointNew = PointNEW.newCartizienPoint(3, 4);
-console.log(pointNew);
+
+// let pointNewFactory = PointFactory.newPolarPoint(3, 4);
+// console.log(pointNewFactory);
+
+
+const pointt = PointNEW.factory.newCartizienPoint(3,5);
+console.log(pointt);
