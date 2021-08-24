@@ -9,11 +9,11 @@ class Person {
     this.annualIncome = 0;
   }
   toString() {
-      return "fake";
-    // return (
-    //   `this person lives at ${this.streetAdress} in ${this.city} with post code of ${this.postCode}` +
-    //   `And he is working as ${this.position} in ${this.companyName} and earning ${this.annualIncome} per year.`
-    // );
+      // return "fake";
+    return (
+      `this person lives at ${this.streetAdress} in ${this.city} with post code of ${this.postCode}` +
+      ` And he is working as ${this.position} in ${this.companyName} and earning ${this.annualIncome} per year.`
+    );
   }
 }
 // we're going to have 2 calsses and one base class
@@ -31,6 +31,10 @@ class PersonBuilder {
 
   build() {
     return this.person;
+  }
+
+  toString(){
+    return this.person.toString()
   }
 }
 
@@ -82,4 +86,4 @@ pb.lives
   .build();
 
 const pbstr = pb.toString();
-console.log(typeof pb)
+console.log(pbstr)
