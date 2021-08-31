@@ -1,0 +1,10 @@
+{
+  "name": "John",
+  "address": {
+    "streetAddress": "123 London Road",
+    "city": "London",
+    "country": "UK",
+    "typeIndex": 1
+  },
+  "typeIndex": 0
+}

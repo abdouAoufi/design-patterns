@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 class Address {
   constructor(streetAddress, city, country) {
     this.streetAddress = streetAddress;
@@ -46,22 +48,6 @@ class Serializer {
     }
   }
 
-  // reconstructRecursive(object) {
-  //   if (object.hasOwnProperty("typeIndex")) {
-  //     console.log("it has");
-  //     let type = this.types[object.typeIndex];
-  //     let obj = new type();
-  //     for (let key in object) {
-  //       if (object.hasOwnProperty(key) && object[key] != null) {
-  //         obj[key] = this.reconstructRecursive(object[key]);
-  //       }
-  //     }
-  //     delete obj.typeIndex;
-  //     return obj;
-  //   }
-  //   return object;
-  // }
-
   reconstructRecursive(object) {
     if (object.hasOwnProperty("typeIndex")) {
       let type = this.types[object.typeIndex];
@@ -80,6 +66,9 @@ class Serializer {
   clone(object) {
     this.markRecursive(object);
     let copy = JSON.parse(JSON.stringify(object));
+    // fs.writeFile("object.json", JSON.stringify(object), "utf-8", (err) => {
+    //   console.log(err);
+    // });
     return this.reconstructRecursive(copy);
   }
 }
