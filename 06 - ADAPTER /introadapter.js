@@ -58,4 +58,4 @@ class AudioPlayer extends MediaPlayer {
 }
 
 const audio = new AudioPlayer();
-audio.play("vlcc" , "loseyourself")
+audio.play("vlc" , "loseyourself")
