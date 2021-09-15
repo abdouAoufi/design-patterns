@@ -24,4 +24,8 @@ let ceo = new Ceo();
 ceo.name = "Aoufi abderahmane";
 ceo.age = 22;
 
+let ceo2 = new Ceo();
+ceo2.name = "Aoufi tarek";
+ceo2.age = 18 ;
+
 console.log(ceo.name, ceo.age);
