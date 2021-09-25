@@ -20,6 +20,7 @@ class GraphicObject {
     if (this.color) buffer.push(this.color + " ");
     buffer.push("\n");
     for (let child of this.children) {
+      console.log(child.children)
       child.print(buffer, depth + 1);
     }
   }
@@ -42,11 +43,13 @@ class Rectangle extends GraphicObject {
 
 let drawing = new GraphicObject();
 drawing.children.push(new Circle("Red"));
-drawing.children.push(new Rectangle("Yellow"));
+drawing.children.push(new Rectangle());
 
+ 
 let group = new GraphicObject();
 group.children.push(new Rectangle("Blue"));
 group.children.push(new Circle("Blue"));
-drawing.children.push(group);
+drawing.children.push(group); 
+ 
 
 console.log(drawing.toString());
