@@ -1,4 +1,6 @@
-class Shape {}
+class Shape {
+  // base class
+}
 
 class Circle extends Shape {
   constructor(radius = 0) {
